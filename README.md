@@ -42,3 +42,56 @@ MIoU of 5-way 1-shot, 5-way 5-shot and 5-way 10-shot shown in the table is evalu
 We provide evaluation datasets in the link below. 
 
 Link to dataset: [pwd: phcu](https://pan.baidu.com/s/1KpFcpuEmta7Vb8Xruyz3qA)
+
+# Training
+For ResNet50, run:
+~~~python
+#!/bin/bash
+torchrun --nnodes=1 --nproc_per_node=6 --master_port=22058 train.py \
+        --bsz 20 \
+        --nepoch 200 \
+        --feature_extractor_path path_to_backbone \
+        --backbone resnet50 \
+        --lr 1e-4 \
+        --benchmark 'fss' \
+        --datapath path_to_data \
+        --num_queries 15  \
+        --dec_layers 1  \
+        --fold 0 \
+        --test_num 1000
+~~~
+
+For ResNet101, run:
+~~~python
+#!/bin/bash
+torchrun --nnodes=1 --nproc_per_node=6 --master_port=22058 train.py \
+        --bsz 20 \
+        --nepoch 200 \
+        --feature_extractor_path path_to_backbone \
+        --backbone resnet101 \
+        --lr 1e-4 \
+        --benchmark 'fss' \
+        --datapath path_to_data \
+        --num_queries 50  \
+        --dec_layers 1  \
+        --fold 0 \
+        --test_num 1000
+~~~
+
+For Swin Transformer, run:
+~~~python
+torchrun --nnodes=1 --nproc_per_node=6 --master_port=22058 train.py \
+        --bsz 20 \
+        --nepoch 200 \
+        --feature_extractor_path path_to_backbone \
+        --backbone swin-l \
+        --lr 1e-4 \
+        --benchmark 'fss' \
+        --datapath path_to_data \
+        --num_queries 15  \
+        --dec_layers 3  \
+        --fold 0 \
+        --test_num 1000
+~~~
+
+
