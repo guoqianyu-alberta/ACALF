@@ -38,7 +38,7 @@ MIoU of 5-way 1-shot, 5-way 5-shot and 5-way 10-shot shown in the table is evalu
 | Lunar terrain |13.04|14.57 |16.16 | 
 | City atellite |9.91|10.78 |11.38 | 
 
-Link to checkpoints: 
+Link to checkpoints: [pwd: 72s1](https://pan.baidu.com/s/1UGZwIoOmqebJKq9nowmVYQ)
 
 # Datasets 
 We provide evaluation datasets in the link below. 
