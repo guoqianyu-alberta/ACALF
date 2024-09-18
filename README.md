@@ -22,7 +22,7 @@ torch==2.0.1+cu118
 
 torchvision==0.15.2+cu118
 # Pretrained Weights
-Pretrained backbone adn ACALF checkpoints are available. Put backbone in `/pretrained` and put checkpoints in `/checkpoints`(we already put them in the relevant directories). 
+ACALF checkpoints are available. Put backbone in `/pretrained` and put checkpoints in `/checkpoints`. 
 
 MIoU of 5-way 1-shot, 5-way 5-shot and 5-way 10-shot shown in the table is evaluated separately on each dataset.
 
@@ -37,6 +37,8 @@ MIoU of 5-way 1-shot, 5-way 5-shot and 5-way 10-shot shown in the table is evalu
 | Polyp | 21.93| 23.91| 23.89|
 | Lunar terrain |13.04|14.57 |16.16 | 
 | City atellite |9.91|10.78 |11.38 | 
+
+Link to checkpoints: 
 
 # Datasets 
 We provide evaluation datasets in the link below. 
