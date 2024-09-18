@@ -112,5 +112,7 @@ CUDA_VISIBLE_DEVICES={gpu_id} python test.py --nshot {1/5/20} --test_dataset dat
 CUDA_VISIBLE_DEVICES={gpu_id} python test.py --nshot {1/5/20} --test_dataset dataset --{vote/post_average/pre_average} --bsz 1  --test_num 1000  --test_epoch 5 --load path_to_checkpoints --num_queries 15 --dec_layer 3 --backbone swin-l 
 ~~~
 
+# LICENSE
+This repository is released under the MIT license as found in the [LICENSE](LICENSE) file.
 
 
