@@ -94,4 +94,23 @@ torchrun --nnodes=1 --nproc_per_node=6 --master_port=22058 train.py \
         --test_num 1000
 ~~~
 
+# Evaluation
+For ResNet50, run:
+~~~python
+#!/bin/bash
+CUDA_VISIBLE_DEVICES={gpu_id} python test.py --nshot {1/5/20} --test_dataset dataset --{vote/post_average/pre_average} --bsz 1  --test_num 1000  --test_epoch 5 --load path_to_checkpoints --num_queries 15 --dec_layer 1 --backbone resnet50 
+~~~
+
+For ResNet101, run:
+~~~python
+#!/bin/bash
+CUDA_VISIBLE_DEVICES={gpu_id} python test.py --nshot {1/5/20} --test_dataset dataset --{vote/post_average/pre_average} --bsz 1  --test_num 1000  --test_epoch 5 --load path_to_checkpoints --num_queries 50 --dec_layer 1 --backbone resnet101
+~~~
+
+~~~python
+#!/bin/bash
+CUDA_VISIBLE_DEVICES={gpu_id} python test.py --nshot {1/5/20} --test_dataset dataset --{vote/post_average/pre_average} --bsz 1  --test_num 1000  --test_epoch 5 --load path_to_checkpoints --num_queries 15 --dec_layer 3 --backbone swin-l 
+~~~
+
+
 
